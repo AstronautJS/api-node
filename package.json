@@ -1,0 +1,27 @@
+{
+  "name": "project-jam",
+  "version": "1.0.0",
+  "description": "project jam, senac to improve life of the peoples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "gulp": "^3.9.1",
+    "helmet": "^3.5.0",
+    "loaded-module": "git+https://github.com/renanbastos93/loaded-module.git",
+    "mongoose": "^4.9.4",
+    "morgan": "^1.8.1",
+    "upfiles": "^1.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
