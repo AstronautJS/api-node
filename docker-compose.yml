@@ -1,0 +1,14 @@
+version: “2”
+ services:
+  astronautjs-backend:
+   build: .
+   volumes:
+     — ./:/usr/src/app
+   ports:
+   — “3000:3000”
+   links:
+    — astronautjs-mongo
+   astronautjs-mongo:
+    image: mongo
+    ports:
+      — “27017:27017”
