@@ -1,5 +1,5 @@
-# HasBeerAPI
-Project to College,  Find your cold and cheap beer by collaborative mode.
+# api-node
+Project to College,  Collaborative JAM
 
 ## Install and Run
 ```bash
