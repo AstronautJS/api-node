@@ -30,13 +30,13 @@ app.route('/api/account')
 	.post(accountController.insert)
 	.put(accountController.alter)
 	.delete(accountController.remove);
-	
+
 app.route('/api/category')
 	.get(categoryController.list)
 	.post(categoryController.insert)
 	.put(categoryController.alter)
 	.delete(categoryController.remove);
-	
+
 app.route('/api/place')
 	.get(placeController.list)
 	.post(placeController.insert)

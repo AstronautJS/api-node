@@ -7,13 +7,16 @@ const CRUD = utils.crud;
 const PlaceService = {};
 
 PlaceService.list = (seek) => {
-	let data = {};
+	let data = {
+		model : Place,
+		seek : seek
+	};
 	return CRUD.list(data)
-	.then((success) => { 
-		return success; 
+	.then((success) => {
+		return success;
 	})
-	.catch((error) => { 
-		return error; 
+	.catch((error) => {
+		return error;
 	})
 	;
 };
@@ -21,11 +24,11 @@ PlaceService.list = (seek) => {
 PlaceService.insert = (data) => {
 	var newObj = new Place(data);
 	return CRUD.add(newObj)
-	.then((success) => { 
-		return success; 
+	.then((success) => {
+		return success;
 	})
-	.catch((error) => { 
-		return error; 
+	.catch((error) => {
+		return error;
 	})
 	;
 };
@@ -33,11 +36,11 @@ PlaceService.insert = (data) => {
 PlaceService.alter = (data) => {
 	var newObj = new Place(data);
 	return CRUD.update(newObj)
-	.then((success) => { 
-		return success; 
+	.then((success) => {
+		return success;
 	})
-	.catch((error) => { 
-		return error; 
+	.catch((error) => {
+		return error;
 	})
 	;
 
@@ -46,11 +49,11 @@ PlaceService.alter = (data) => {
 PlaceService.remove = () => {
 	var newObj = new Place(data);
 	return CRUD.update(newObj)
-	.then((success) => { 
-		return success; 
+	.then((success) => {
+		return success;
 	})
-	.catch((error) => { 
-		return error; 
+	.catch((error) => {
+		return error;
 	})
 	;
 

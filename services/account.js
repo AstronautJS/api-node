@@ -7,13 +7,16 @@ const CRUD = utils.crud;
 const AccountService = {};
 
 AccountService.list = (seek) => {
-	let data = {};
+	let data = {
+		model : Account,
+		seek : seek
+	};
 	return CRUD.list(data)
-	.then((success) => { 
-		return success; 
+	.then((success) => {
+		return success;
 	})
-	.catch((error) => { 
-		return error; 
+	.catch((error) => {
+		return error;
 	})
 	;
 };
@@ -21,11 +24,11 @@ AccountService.list = (seek) => {
 AccountService.insert = (data) => {
 	var newObj = new Account(data);
 	return CRUD.add(newObj)
-	.then((success) => { 
-		return success; 
+	.then((success) => {
+		return success;
 	})
-	.catch((error) => { 
-		return error; 
+	.catch((error) => {
+		return error;
 	})
 	;
 };
@@ -33,11 +36,11 @@ AccountService.insert = (data) => {
 AccountService.alter = (data) => {
 	var newObj = new Account(data);
 	return CRUD.update(newObj)
-	.then((success) => { 
-		return success; 
+	.then((success) => {
+		return success;
 	})
-	.catch((error) => { 
-		return error; 
+	.catch((error) => {
+		return error;
 	})
 	;
 
@@ -46,11 +49,11 @@ AccountService.alter = (data) => {
 AccountService.remove = () => {
 	var newObj = new Account(data);
 	return CRUD.update(newObj)
-	.then((success) => { 
-		return success; 
+	.then((success) => {
+		return success;
 	})
-	.catch((error) => { 
-		return error; 
+	.catch((error) => {
+		return error;
 	})
 	;
 

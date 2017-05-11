@@ -10,12 +10,13 @@ CRUD.add = (param) => {
 				var ex = 'Mongoose not insert ' + err;
 				reject(ex);
 			}
-			resolve(data);			
+			resolve(data);
 		});
 	});
 };
 
 CRUD.list = (param) => {
+	console.log(param);
 	return new Promise((resolve, reject) => {
 		param.model
 		.find(param.seek)
@@ -58,7 +59,7 @@ CRUD.listAll = (param) => {
 			}
 			resolve(data);
 		})
-	}); 
+	});
 };
 
 CRUD.update = (param) => {
