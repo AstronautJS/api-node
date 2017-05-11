@@ -65,7 +65,7 @@ CRUD.update = (param) => {
 	if(param.data._id) param.data._id = ObjectId(param.data._id);
 	return new Promise((resolve, reject) => {
 		param.model
-		.update(param.data._id, param.data,{upsert: false}, (err, data) => {
+		.update(param.data._id, param.data, {upsert: false}, (err, data) => {
 			if(err){
 				var ex = 'Mongoose not update ' + err;
 				reject(ex);

@@ -33,9 +33,12 @@ AccountService.insert = (data) => {
 	;
 };
 
-AccountService.alter = (data) => {
-	var newObj = new Account(data);
-	return CRUD.update(newObj)
+AccountService.alter = (param) => {
+	let data = {
+		model: Category,
+		data: param
+	};
+	return CRUD.update(data)
 	.then((success) => {
 		return success;
 	})

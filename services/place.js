@@ -33,9 +33,12 @@ PlaceService.insert = (data) => {
 	;
 };
 
-PlaceService.alter = (data) => {
-	var newObj = new Place(data);
-	return CRUD.update(newObj)
+PlaceService.alter = (param) => {
+	let data = {
+		model: Category,
+		data: param
+	};
+	return CRUD.update(data)
 	.then((success) => {
 		return success;
 	})

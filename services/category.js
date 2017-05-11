@@ -33,9 +33,12 @@ CategoryService.insert = (data) => {
 	;
 };
 
-CategoryService.alter = (data) => {
-	var newObj = new Category(data);
-	return CRUD.update(newObj)
+CategoryService.alter = (param) => {
+	let data = {
+		model: Category,
+		data: param
+	};
+	return CRUD.update(data)
 	.then((success) => {
 		return success;
 	})
