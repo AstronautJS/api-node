@@ -13,6 +13,6 @@ var PlaceSchema = mongoose.Schema({
 	picture: String
 },{versionKey: false});
 
-var modelPlace = mongoose.model('Place', PlaceSchema, 'Place');
+var modelPlace = mongoose.model('Place', PlaceSchema, 'place');
 
 module.exports = modelPlace;
