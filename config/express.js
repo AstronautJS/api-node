@@ -31,4 +31,6 @@ app.use((req, res, next) => {
 	next();
 });
 
+app.use('/images',express.static('./images'));
+
 module.exports = app;
