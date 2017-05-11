@@ -4,7 +4,6 @@ const 	upfiles = require('upfiles')()
 		.exec();
 
 const 	config 		 		= upfiles.config;
-const 	example				= upfiles.exampleJAM;
 const 	accountController	= upfiles.accountController;
 const 	categoryController	= upfiles.categoryController;
 const 	placeController		= upfiles.placeController;
@@ -18,12 +17,6 @@ app.route('/')
 	.get(function(req, res){
 		res.send("Hellor World!!!");
 	});
-
-app.route('/api/example')
-	.get(example.list)
-	.post(example.insert)
-	.put(example.alter)
-	.delete(example.remove);
 
 app.route('/api/account')
 	.get(accountController.list)
