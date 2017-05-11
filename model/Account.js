@@ -13,6 +13,6 @@ var AccountSchema = mongoose.Schema({
 	}]
 },{versionKey: false});
 
-var modelAccount = mongoose.model('Account', AccountSchema, 'Account');
+var modelAccount = mongoose.model('account', AccountSchema, 'account');
 
 module.exports = modelAccount;

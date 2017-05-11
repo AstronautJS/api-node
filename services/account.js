@@ -46,7 +46,25 @@ AccountService.alter = (param) => {
 		return error;
 	})
 	;
+};
 
+// db.account.update({
+//   "username":"test1",
+//   "visitedPlaces.count": 10
+// }, {$inc: {"visitedPlaces.$.count":1}});
+AccountService.alterVisited = (param) => {
+	var data = {
+		model: Account,
+		data: param
+	};
+	return CRUD.updateVisited(data)
+	.then((success) => {
+		return success;
+	})
+	.catch((error) => {
+		return error;
+	})
+	;
 };
 
 AccountService.remove = (param) => {

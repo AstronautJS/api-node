@@ -18,6 +18,10 @@ app.route('/')
 		res.send("Hellor World!!!");
 	});
 
+app.route('/api/account/visitedPlaces')
+.put(accountController.alterVisited)
+;
+
 app.route('/api/account')
 	.get(accountController.list)
 	.post(accountController.insert)

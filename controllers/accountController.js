@@ -17,6 +17,11 @@ AccountController.alter = (req, res) => {
 	.then(success => res.status(201).json(success))
 	.catch(err => res.status(400).send(err));
 };
+AccountController.alterVisited = (req, res) => {
+	AccountService.alterVisited(req.body)
+	.then(success => res.status(201).json(success))
+	.catch(err => res.status(400).send(err));
+};
 AccountController.remove = (req, res) => {
 	AccountService.remove(req.body)
 	.then(success => res.status(201).json(success))

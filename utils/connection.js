@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const db = mongoose.connection;
 
-var connLocal = 'mongodb://localhost:27017/astronautjs';
+var connLocal = 'mongodb://localhost:27017/jam';
 
 mongoose.connect(connLocal);
 
