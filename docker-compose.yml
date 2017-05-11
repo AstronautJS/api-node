@@ -22,6 +22,11 @@ services:
     restart: always
     volumes:
       - V:\Docker\Volumes\astronautjs-mongo\data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "echo 'db.stats().ok' | mongo 127.0.0.1:27017/astronautjs --quiet"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
 networks:
   default:
