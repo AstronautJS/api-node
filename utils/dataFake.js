@@ -505,17 +505,52 @@ var Category = [
 	{
 		name: 'Roupas',
 		icon: 'roupas.svg',
-		picture: 'roupas.svg'
+		picture: 'roupas.jpg'
 	},
 	{
 		name: 'Comida',
 		icon: 'comida.svg',
-		picture: 'comida.svg'
+		picture: 'comida.jpg'
 	} ,
 	{
 		name: 'Cultura',
 		icon: 'cultura.svg',
-		picture: 'cultura.svg'
+		picture: 'cultura.jpg'
+	} ,
+	{
+		name: 'Eletronicos',
+		icon: 'eletronicos.svg',
+		picture: 'eletronicos.jpg'
+	} ,
+	{
+		name: 'Bares',
+		icon: 'bares.svg',
+		picture: 'bares.jpg'
+	} ,
+	{
+		name: 'Informatica',
+		icon: 'informatica.svg',
+		picture: 'informatica.jpg'
+	} ,
+	{
+		name: 'Livraria',
+		icon: 'livraria.svg',
+		picture: 'livraria.jpg'
+	} ,
+	{
+		name: 'Instrumentos',
+		icon: 'instrumentos.svg',
+		picture: 'instrumentos.jpg'
+	} ,
+	{
+		name: 'Sapataria',
+		icon: 'sapataria.svg',
+		picture: 'sapataria.jpg'
+	} ,
+	{
+		name: 'Bijuterias',
+		icon: 'bijuterias.svg',
+		picture: 'bijuterias.jpg'
 	}
 ];
 
