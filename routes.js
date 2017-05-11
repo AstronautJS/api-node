@@ -34,8 +34,10 @@ app.route('/api/category')
 	.put(categoryController.alter)
 	.delete(categoryController.remove);
 
-app.route('/api/place')
+app.route('/api/place/:category')
 	.get(placeController.list)
+;
+app.route('/api/place')
 	.post(placeController.insert)
 	.put(placeController.alter)
 	.delete(placeController.remove);

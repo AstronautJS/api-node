@@ -3,7 +3,7 @@ var PlaceService = loadedModule('services/place');
 var PlaceController = {};
 
 PlaceController.list = (req, res) => {
-	PlaceService.list({})
+	PlaceService.list({category: req.params.category})
 	.then(success => res.status(200).json(success))
 	.catch(err => res.status(400).send(err));
 };

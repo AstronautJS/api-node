@@ -2,14 +2,14 @@
 
 const utils = loadedModule('utils');
 const Place = loadedModule('model/Place');
-
+var ObjectId = require('mongoose').Types.ObjectId;
 const CRUD = utils.crud;
 const PlaceService = {};
 
 PlaceService.list = (seek) => {
 	let data = {
 		model : Place,
-		seek : seek
+		seek : {category: ObjectId(seek.category)}
 	};
 	return CRUD.list(data)
 	.then((success) => {
