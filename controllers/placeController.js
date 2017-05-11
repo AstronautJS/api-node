@@ -1,26 +1,26 @@
 'use strict';
-var JamService = loadedModule('services/example');
-var JamController = {};
+var PlaceService = loadedModule('services/place');
+var PlaceController = {};
 
-JamController.list = (req, res) => {
-	JamService.list({})
+PlaceController.list = (req, res) => {
+	PlaceService.list({})
 	.then(success => res.status(200).json(success))
 	.catch(err => res.status(400).send(err));
 };
-JamController.insert = (req, res) => {
-	JamService.insert(req.body)
+PlaceController.insert = (req, res) => {
+	PlaceService.insert(req.body)
 	.then(success => res.status(201).json(success))
 	.catch(err => res.status(400).send(err));
 };
-JamController.alter = (req, res) => {
-	JamService.alter(req.body)
+PlaceController.alter = (req, res) => {
+	PlaceService.alter(req.body)
 	.then(success => res.status(201).json(success))
 	.catch(err => res.status(400).send(err));
 };
-JamController.remove = (req, res) => {
-	JamService.remove(req.body)
+PlaceController.remove = (req, res) => {
+	PlaceService.remove(req.body)
 	.then(success => res.status(201).json(success))
 	.catch(err => res.status(400).send(err));
 };
 
-module.exports = JamController;
+module.exports = PlaceController;
