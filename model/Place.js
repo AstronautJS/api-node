@@ -11,7 +11,7 @@ var PlaceSchema = mongoose.Schema({
 	address: String,
 	phone: String,
 	picture: String
-});
+},{versionKey: false});
 
 var modelPlace = mongoose.model('Place', PlaceSchema, 'Place');
 

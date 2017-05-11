@@ -11,6 +11,9 @@ RUN npm install
 # Bundle app source
 COPY . /usr/src/app
 
+# Replace connection string
+RUN sed -i -e 's/localhost/astronautjs-mongo/g' /usr/src/app/utils/connection.js
+
 # Expose express port
 EXPOSE 3000
 

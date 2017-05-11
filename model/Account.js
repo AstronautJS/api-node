@@ -11,7 +11,7 @@ var AccountSchema = mongoose.Schema({
 		},
 		count: Number
 	}]
-});
+},{versionKey: false});
 
 var modelAccount = mongoose.model('Account', AccountSchema, 'Account');
 
