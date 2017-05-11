@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 var CategorySchema = mongoose.Schema({
 	name: String,
+	icon: String,
 	picture: String
 },{versionKey: false});
 
