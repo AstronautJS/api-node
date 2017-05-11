@@ -35,7 +35,7 @@ AccountService.insert = (data) => {
 
 AccountService.alter = (param) => {
 	let data = {
-		model: Category,
+		model: Account,
 		data: param
 	};
 	return CRUD.update(data)
