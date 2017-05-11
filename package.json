@@ -16,6 +16,7 @@
     "helmet": "^3.5.0",
     "loaded-module": "git+https://github.com/renanbastos93/loaded-module.git",
     "mongoose": "^4.9.4",
+    "mongoose-dbref": "0.0.2",
     "morgan": "^1.8.1",
     "upfiles": "^1.2.0"
   },

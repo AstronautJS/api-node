@@ -1,14 +1,29 @@
-version: “2”
- services:
-  astronautjs-backend:
-   build: .
-   volumes:
-     — ./:/usr/src/app
-   ports:
-   — “3000:3000”
-   links:
-    — astronautjs-mongo
-   astronautjs-mongo:
+version: '3'
+services:
+  #build:
+    #  context: .
+  astronautjs-nodejs:
+    image: astronautjs/api-node
+    container_name: astronautjs-nodejs
+    hostname: astronautjs-nodejs
+    restart: always
+    environment:
+      - VIRTUAL_HOST=astronautjs.alexslx.xyz
+      - VIRTUAL_PORT=3000
+      - LETSENCRYPT_HOST=astronautjs.alexslx.xyz
+      - LETSENCRYPT_EMAIL=alexslxbr+letsencrypt@gmail.com
+    links:
+      - astronautjs-mongo
+
+  astronautjs-mongo:
     image: mongo
-    ports:
-      — “27017:27017”
+    container_name: astronautjs-mongo
+    hostname: astronautjs-mongo
+    restart: always
+    volumes:
+      - V:\Docker\Volumes\astronautjs-mongo\data:/data
+
+networks:
+  default:
+    external:
+      name: nginx-proxy-network

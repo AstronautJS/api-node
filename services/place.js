@@ -1,12 +1,12 @@
 'use strict';
 
 const utils = loadedModule('utils');
-const Jam = loadedModule('model/Example');
+const Place = loadedModule('model/Place');
 
 const CRUD = utils.crud;
-const JamService = {};
+const PlaceService = {};
 
-JamService.list = (seek) => {
+PlaceService.list = (seek) => {
 	let data = {};
 	return CRUD.list(data)
 	.then((success) => { 
@@ -18,9 +18,9 @@ JamService.list = (seek) => {
 	;
 };
 
-JamService.insert = (data) => {
-	var newPub = new Jam(data);
-	return CRUD.add(newPub)
+PlaceService.insert = (data) => {
+	var newObj = new Place(data);
+	return CRUD.add(newObj)
 	.then((success) => { 
 		return success; 
 	})
@@ -30,22 +30,9 @@ JamService.insert = (data) => {
 	;
 };
 
-JamService.alter = (data) => {
-	var newPub = new Jam(data);
-	return CRUD.update(newPub)
-	.then((success) => { 
-		return success; 
-	})
-	.catch((error) => { 
-		return error; 
-	})
-	;
-
-};
-
-JamService.remove = () => {
-	var newPub = new Jam(data);
-	return CRUD.update(newPub)
+PlaceService.alter = (data) => {
+	var newObj = new Place(data);
+	return CRUD.update(newObj)
 	.then((success) => { 
 		return success; 
 	})
@@ -56,4 +43,17 @@ JamService.remove = () => {
 
 };
 
-module.exports = JamService;
+PlaceService.remove = () => {
+	var newObj = new Place(data);
+	return CRUD.update(newObj)
+	.then((success) => { 
+		return success; 
+	})
+	.catch((error) => { 
+		return error; 
+	})
+	;
+
+};
+
+module.exports = PlaceService;

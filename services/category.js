@@ -1,12 +1,12 @@
 'use strict';
 
 const utils = loadedModule('utils');
-const Jam = loadedModule('model/Example');
+const Category = loadedModule('model/Category');
 
 const CRUD = utils.crud;
-const JamService = {};
+const CategoryService = {};
 
-JamService.list = (seek) => {
+CategoryService.list = (seek) => {
 	let data = {};
 	return CRUD.list(data)
 	.then((success) => { 
@@ -18,9 +18,9 @@ JamService.list = (seek) => {
 	;
 };
 
-JamService.insert = (data) => {
-	var newPub = new Jam(data);
-	return CRUD.add(newPub)
+CategoryService.insert = (data) => {
+	var newObj = new Category(data);
+	return CRUD.add(newObj)
 	.then((success) => { 
 		return success; 
 	})
@@ -30,22 +30,9 @@ JamService.insert = (data) => {
 	;
 };
 
-JamService.alter = (data) => {
-	var newPub = new Jam(data);
-	return CRUD.update(newPub)
-	.then((success) => { 
-		return success; 
-	})
-	.catch((error) => { 
-		return error; 
-	})
-	;
-
-};
-
-JamService.remove = () => {
-	var newPub = new Jam(data);
-	return CRUD.update(newPub)
+CategoryService.alter = (data) => {
+	var newObj = new Category(data);
+	return CRUD.update(newObj)
 	.then((success) => { 
 		return success; 
 	})
@@ -56,4 +43,17 @@ JamService.remove = () => {
 
 };
 
-module.exports = JamService;
+CategoryService.remove = () => {
+	var newObj = new Category(data);
+	return CRUD.update(newObj)
+	.then((success) => { 
+		return success; 
+	})
+	.catch((error) => { 
+		return error; 
+	})
+	;
+
+};
+
+module.exports = CategoryService;

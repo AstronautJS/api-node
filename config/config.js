@@ -10,7 +10,7 @@ config.server = {
 
 // Token settings
 config.token = {
-    secret: process.env.TOKEN_SECRET || 'projectJamTokem',
+    secret: process.env.TOKEN_SECRET || 'astronautJsTokem',
     expiration: process.env.TOKEN_EXPIRATION || 60*60*24 //24 hours
 };
 

@@ -1,12 +1,12 @@
 'use strict';
 
 const utils = loadedModule('utils');
-const Jam = loadedModule('model/Example');
+const Account = loadedModule('model/Account');
 
 const CRUD = utils.crud;
-const JamService = {};
+const AccountService = {};
 
-JamService.list = (seek) => {
+AccountService.list = (seek) => {
 	let data = {};
 	return CRUD.list(data)
 	.then((success) => { 
@@ -18,9 +18,9 @@ JamService.list = (seek) => {
 	;
 };
 
-JamService.insert = (data) => {
-	var newPub = new Jam(data);
-	return CRUD.add(newPub)
+AccountService.insert = (data) => {
+	var newObj = new Account(data);
+	return CRUD.add(newObj)
 	.then((success) => { 
 		return success; 
 	})
@@ -30,22 +30,9 @@ JamService.insert = (data) => {
 	;
 };
 
-JamService.alter = (data) => {
-	var newPub = new Jam(data);
-	return CRUD.update(newPub)
-	.then((success) => { 
-		return success; 
-	})
-	.catch((error) => { 
-		return error; 
-	})
-	;
-
-};
-
-JamService.remove = () => {
-	var newPub = new Jam(data);
-	return CRUD.update(newPub)
+AccountService.alter = (data) => {
+	var newObj = new Account(data);
+	return CRUD.update(newObj)
 	.then((success) => { 
 		return success; 
 	})
@@ -56,4 +43,17 @@ JamService.remove = () => {
 
 };
 
-module.exports = JamService;
+AccountService.remove = () => {
+	var newObj = new Account(data);
+	return CRUD.update(newObj)
+	.then((success) => { 
+		return success; 
+	})
+	.catch((error) => { 
+		return error; 
+	})
+	;
+
+};
+
+module.exports = AccountService;
