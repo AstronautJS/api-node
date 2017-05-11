@@ -46,9 +46,12 @@ AccountService.alter = (data) => {
 
 };
 
-AccountService.remove = () => {
-	var newObj = new Account(data);
-	return CRUD.update(newObj)
+AccountService.remove = (param) => {
+	let data = {
+		model: Account,
+		data: param
+	};
+	return CRUD.remove(data)
 	.then((success) => {
 		return success;
 	})

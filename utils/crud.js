@@ -16,7 +16,6 @@ CRUD.add = (param) => {
 };
 
 CRUD.list = (param) => {
-	console.log(param);
 	return new Promise((resolve, reject) => {
 		param.model
 		.find(param.seek)
@@ -63,8 +62,8 @@ CRUD.listAll = (param) => {
 };
 
 CRUD.update = (param) => {
+	if(param.data._id) param.data._id = ObjectId(param.data._id);
 	return new Promise((resolve, reject) => {
-		param.data._id = ObjectId(param._id);
 		param.model
 		.update(param.data._id, param.data,{upsert: false}, (err, data) => {
 			if(err){
@@ -77,6 +76,7 @@ CRUD.update = (param) => {
 };
 
 CRUD.remove = (param) => {
+	if(param.data._id) param.data._id = ObjectId(param.data._id);
 	return new Promise((resolve, reject) => {
 		param.model
 		.remove(param.data, (err, data) => {

@@ -46,9 +46,12 @@ CategoryService.alter = (data) => {
 
 };
 
-CategoryService.remove = () => {
-	var newObj = new Category(data);
-	return CRUD.update(newObj)
+CategoryService.remove = (param) => {
+	let data = {
+		model: Category,
+		data: param
+	};
+	return CRUD.remove(data)
 	.then((success) => {
 		return success;
 	})

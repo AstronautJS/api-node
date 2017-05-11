@@ -46,9 +46,12 @@ PlaceService.alter = (data) => {
 
 };
 
-PlaceService.remove = () => {
-	var newObj = new Place(data);
-	return CRUD.update(newObj)
+PlaceService.remove = (param) => {
+	let data = {
+		model: Place,
+		data: param
+	};
+	return CRUD.remove(newObj)
 	.then((success) => {
 		return success;
 	})

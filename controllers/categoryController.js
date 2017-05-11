@@ -20,7 +20,7 @@ CategoryController.alter = (req, res) => {
 };
 CategoryController.remove = (req, res) => {
 	CategoryService.remove(req.body)
-	.then(success => res.status(201).json(success))
+	.then(success => res.status(200).json(success))
 	.catch(err => res.status(400).send(err));
 };
 
