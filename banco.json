@@ -1,0 +1,227 @@
+account
+--------
+[
+	{
+		"username": "teste1",
+		"password": "teste",
+		"visited": [
+			{
+				"place": {
+					"$ref": "places",
+					"$id": ObjectId("5126bbf64aed4daf9abcd001")
+				},
+				"count": 100
+			},
+			{
+				"place": {
+					"$ref": "places",
+					"$id": ObjectId("5126bbf64aed4daf9abcd002")
+				},
+				"count": 90
+			},
+			{
+				"place": {
+					"$ref": "places",
+					"$id": ObjectId("5126bbf64aed4daf9abcd003")
+				},
+				"count": 80
+			},
+			{
+				"place": {
+					"$ref": "places",
+					"$id": ObjectId("5126bbf64aed4daf9abcd004")
+				},
+				"count": 70
+			}
+		]
+	},
+	{
+		"username": "teste2",
+		"password": "teste",
+		"visited": [
+			{
+				"place": {
+					"$ref": "places",
+					"$id": ObjectID("5126bbf64aed4daf9abcd001")
+				},
+				"count": 10
+			},
+			{
+				"place": {
+					"$ref": "places",
+					"$id": ObjectID("5126bbf64aed4daf9abcd002")
+				},
+				"count": 20
+			},
+			{
+				"place": {
+					"$ref": "places",
+					"$id": ObjectID("5126bbf64aed4daf9abcd003")
+				},
+				"count": 30
+			},
+			{
+				"place": {
+					"$ref": "places",
+					"$id": ObjectID("5126bbf64aed4daf9abcd004")
+				},
+				"count": 40
+			}
+		]
+	},
+	{
+		"username": "teste3",
+		"password": "teste",
+		"visited": []
+	}
+]
+
+category
+--------
+[
+	{
+		"_id": ObjectId("5913ae9f6f76d60fb4555d59"),
+		"name": "Bares",
+		"icon": "http://www.google.com"
+	},
+	{
+		"_id": ObjectId("5913aeb66f76d60fb4555d5a"),
+		"name": "Restaurantes",
+		"icon": "http://www.google.com"
+	},
+	{
+		"_id": ObjectId("5913aecb6f76d60fb4555d5b"),
+		"name": "Entretenimento",
+		"icon": "http://www.google.com"
+	},
+	{
+		"_id": ObjectId("5913aef36f76d60fb4555d5c"),
+		"name": "Cultura",
+		"icon": "http://www.google.com"
+	}
+]
+
+places
+--------
+[
+	{
+		"_id" : ObjectId("5126bbf64aed4daf9abcd001"),
+		"name": "Bar do Zeca",
+		"category": {
+			"$ref": "places",
+			"$id": ObjectID("5913aeb66f76d60fb4555d5a")
+		},
+		"description": "Lorem Ipsum",
+		"picture": "http://www.google.com"
+	},
+	{
+		"_id" : ObjectId("5126bbf64aed4daf9abcd002"),
+		"name": "Bar do Juca",
+		"category": {
+			"$ref": "places",
+			"$id": ObjectID("5913aeb66f76d60fb4555d5a")
+		},
+		"description": "Lorem Ipsum",
+		"picture": "http://www.google.com"
+	},
+	{
+		"_id" : ObjectId("5126bbf64aed4daf9abcd003"),
+		"name": "Bar do Pedro",
+		"category": {
+			"$ref": "places",
+			"$id": ObjectID("5913aeb66f76d60fb4555d5a")
+		},
+		"description": "Lorem Ipsum",
+		"picture": "http://www.google.com"
+	},
+	{
+		"_id" : ObjectId("5126bbf64aed4daf9abcd004"),
+		"name": "Restaurante #1",
+		"category": {
+			"$ref": "places",
+			"$id": ObjectID("5913ae9f6f76d60fb4555d59")
+		},
+		"description": "Lorem Ipsum",
+		"picture": "http://www.google.com"
+	},
+	{
+		"_id" : ObjectId("5126bbf64aed4daf9abcd005"),
+		"name": "Restaurante #2",
+		"category": {
+			"$ref": "places",
+			"$id": ObjectID("5913ae9f6f76d60fb4555d59")
+		},
+		"description": "Lorem Ipsum",
+		"picture": "http://www.google.com"
+	},
+	{
+		"_id" : ObjectId("5126bbf64aed4daf9abcd006"),
+		"name": "Restaurante #3",
+		"category": {
+			"$ref": "places",
+			"$id": ObjectID("5913ae9f6f76d60fb4555d59")
+		},
+		"description": "Lorem Ipsum",
+		"picture": "http://www.google.com"
+	},
+	{
+		"_id" : ObjectId("5126bbf64aed4daf9abcd007"),
+		"name": "Cinema do Zé",
+		"category": {
+			"$ref": "places",
+			"$id": ObjectID("5913aef36f76d60fb4555d5c")
+		},
+		"description": "Lorem Ipsum",
+		"picture": "http://www.google.com"
+	},
+	{
+		"_id" : ObjectId("5126bbf64aed4daf9abcd008"),
+		"name": "Museu do Pedro",
+		"category": {
+			"$ref": "places",
+			"$id": ObjectID("5913aef36f76d60fb4555d5c")
+		},
+		"description": "Lorem Ipsum",
+		"picture": "http://www.google.com"
+	},
+	{
+		"_id" : ObjectId("5126bbf64aed4daf9abcd009"),
+		"name": "Galeria de Arte",
+		"category": {
+			"$ref": "places",
+			"$id": ObjectID("5913aef36f76d60fb4555d5c")
+		},
+		"description": "Lorem Ipsum",
+		"picture": "http://www.google.com"
+	},
+	{
+		"_id" : ObjectId("5126bbf64aed4daf9abcd010"),
+		"name": "Entretenimento #1",
+		"category": {
+			"$ref": "places",
+			"$id": ObjectID("5913aecb6f76d60fb4555d5b")
+		},
+		"description": "Lorem Ipsum",
+		"picture": "http://www.google.com"
+	},
+	{
+		"_id" : ObjectId("5126bbf64aed4daf9abcd011"),
+		"name": "Entretenimento #2",
+		"category": {
+			"$ref": "places",
+			"$id": ObjectID("5913aecb6f76d60fb4555d5b")
+		},
+		"description": "Lorem Ipsum",
+		"picture": "http://www.google.com"
+	},
+	{
+		"_id" : ObjectId("5126bbf64aed4daf9abcd012"),
+		"name": "Entretenimento #3",
+		"category": {
+			"$ref": "places",
+			"$id": ObjectID("5913aecb6f76d60fb4555d5b")
+		},
+		"description": "Lorem Ipsum",
+		"picture": "http://www.google.com"
+	}
+]
