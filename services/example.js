@@ -7,16 +7,13 @@ const CRUD = utils.crud;
 const SERVJAM = {};
 
 SERVJAM.list = (seek) => {
-	let data = {
-		model : Jam,
-		seek : seek
-	};
+	let data = {};
 	return CRUD.list(data)
-	.then((success) => { 
-		return success; 
+	.then((success) => {
+		return success;
 	})
-	.catch((error) => { 
-		return error; 
+	.catch((error) => {
+		return error;
 	})
 	;
 };
@@ -24,11 +21,11 @@ SERVJAM.list = (seek) => {
 SERVJAM.insert = (data) => {
 	var newPub = new Jam(data);
 	return CRUD.add(newPub)
-	.then((success) => { 
-		return success; 
+	.then((success) => {
+		return success;
 	})
-	.catch((error) => { 
-		return error; 
+	.catch((error) => {
+		return error;
 	})
 	;
 };
@@ -36,11 +33,11 @@ SERVJAM.insert = (data) => {
 SERVJAM.alter = (data) => {
 	var newPub = new Jam(data);
 	return CRUD.update(newPub)
-	.then((success) => { 
-		return success; 
+	.then((success) => {
+		return success;
 	})
-	.catch((error) => { 
-		return error; 
+	.catch((error) => {
+		return error;
 	})
 	;
 
@@ -49,11 +46,11 @@ SERVJAM.alter = (data) => {
 SERVJAM.remove = () => {
 	var newPub = new Jam(data);
 	return CRUD.update(newPub)
-	.then((success) => { 
-		return success; 
+	.then((success) => {
+		return success;
 	})
-	.catch((error) => { 
-		return error; 
+	.catch((error) => {
+		return error;
 	})
 	;
 
