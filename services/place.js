@@ -35,7 +35,7 @@ PlaceService.insert = (data) => {
 
 PlaceService.alter = (param) => {
 	let data = {
-		model: Category,
+		model: Place,
 		data: param
 	};
 	return CRUD.update(data)
